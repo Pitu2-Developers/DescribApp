@@ -1,0 +1,8 @@
+export const LOGIN: string = 'login'
+export const MESSAGE: string = 'message'
+export const REPLY: string = 'reply'
+export const LOGOUT: string = 'logout'
+export const ALERT: string = 'alert'
+export const ALERT_SUCCESS: string = 'alert_success'
+export const ALERT_FAILED: string = 'alert_failed'
+export const ADJUSTER_OFFLINE: string = 'alert'

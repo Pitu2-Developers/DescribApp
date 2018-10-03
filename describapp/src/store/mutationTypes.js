@@ -1,0 +1,28 @@
+export const RESET_STATE = 'RESET_STATE'
+export const CHAT_ROOM = 'CHAT_ROOM'
+
+export const NOTIFICATION = {
+    ADD: 'NOTIFICATION_ADD'
+}
+
+export const LOGIN = {
+    PENDING: 'LOGIN_PENDING',
+    SUCCESS: 'LOGIN_SUCCESS',
+    FAILED: 'LOGIN_FAILED',
+}
+
+export const LAYOUT = {
+    SET: 'LAYOUT_SET',
+}
+
+export const LOGOUT = {
+    PENDING: 'LOGOUT_PENDING',
+    SUCCESS: 'LOGOUT_SUCCESS',
+    FAILED: 'LOGOUT_FAILED',
+}
+
+export const ALERT = {
+    SUCCESS: 'ALERT_SUCCESS',
+    FAILED: 'ALERT_FAILED',
+    PENDING: 'ALERT_PENDING',
+}
