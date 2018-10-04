@@ -35,7 +35,7 @@
 
     <q-page-container>
      
-        <q-page >
+        <q-page padding="">
 
            <q-scroll-area style="width:100vw; height:70vh;">
 

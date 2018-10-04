@@ -3,49 +3,55 @@
 const routes = [
   {
     path: '/',
-    component: () => import('layouts/Index.vue'),
+    component: () => import('layouts/Index'),
     children: [
-      { path: '', component: () => import('pages/Index.vue') },
-      // { path: 'dashboard', component: () => import('pages/dashboard.vue') }
+      { path: '', component: () => import('pages/Index') },
+      // { path: 'dashboard', component: () => import('pages/dashboard') }
     ]
   },
   {
     path: '/dashboard',
-    component: () => import('layouts/dashboard.vue'),
+    component: () => import('layouts/dashboard'),
     children: [
       {
         path: 'client',
         name: 'dashboard-client',
-        component: () => import('pages/dashboard.vue'),
+        component: () => import('pages/dashboard'),
       },
       {
         path: 'adjuster',
         name: 'dashboard-adjuster',
-        component: () => import('pages/dashboard-adjuster.vue')
+        component: () => import('pages/dashboard-adjuster')
       },
       {
         path: 'alert/:id',
-        component: () => import('pages/alert.vue')
+        component: () => import('pages/alert')
       }
     ]
   },
   {
     path: '/chat',
-    component: () => import('layouts/chat.vue'),
+    component: () => import('layouts/chat'),
     children: [
       {
         path: '',
-        component: () => import('pages/chat-list.vue')
+        component: () => import('pages/chat-list')
       }
     ]
   },
   {
     path: '/chat-room/:id',
-    component: () => import('layouts/chat-room.vue')
+    component: () => import('layouts/chat-room')
   },
   {
     path: '/contacts',
-    component: () => import('layouts/contacts')
+    component: () => import('layouts/contacts'),
+    children: [
+      {
+        path: '',
+        component: () => import('pages/contacts')
+      }
+    ]
   }
 
 ]
@@ -54,7 +60,7 @@ const routes = [
 if (process.env.MODE !== 'ssr') {
   routes.push({
     path: '*',
-    component: () => import('pages/Error404.vue')
+    component: () => import('pages/Error404')
   })
 }
 

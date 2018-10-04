@@ -91,7 +91,7 @@ describe('/api/* [TEST]', () => {
 
 
     })
-    it('should create a adjuster ', async (done) => {
+    it.skip('should create a adjuster ', async (done) => {
         const data: IAdjusterModel = {
             email: 'adjuster@gmail.com',
             firstName: 'Eduardo',

@@ -41,7 +41,7 @@ export class NotificationController {
     }
 
     @OnMessage(LOGOUT)
-    onLogout(@MessageBody() _id: string) {
+    onLogout(@MessageBody() _id: string): void {
         this.redisHandler.deleteSocketID(_id)
     }
 
@@ -121,7 +121,8 @@ export class NotificationController {
                     socket.emit(ALERT_SUCCESS, { accident })
 
                     if (isConnected) {
-                        io.to(await this.redisHandler.getSocketID(adjuster)).emit(ALERT_SUCCESS, { accident, notification })
+                        const adjusterSocketID: string = await this.redisHandler.getSocketID(adjuster)
+                        io.to(adjusterSocketID).emit(ALERT_SUCCESS, { accident, notification })
                     }
 
                 } else {

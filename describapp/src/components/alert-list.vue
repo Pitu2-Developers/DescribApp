@@ -1,6 +1,6 @@
 <template>
     <q-scroll-area style="width:100%; height:200px;">
-    <q-list highlight inset-separator>
+    <q-list v-if="getNotifications.length>0" highlight inset-separator>
         <q-item v-for="notification in getNotifications" :key="notification._id" >
           <q-item-side :avatar="notification.sender.avatar" />
             <q-item-main :label="notification.sender.fullname+' sent a alarm'" label-lines="1" />
@@ -12,6 +12,9 @@
 
         </q-item>
       </q-list>
+      <div style="height:200px;" class="flex flex-center">
+        <p class="text-gray">Any notification yet</p>
+      </div>
 
     </q-scroll-area>
 

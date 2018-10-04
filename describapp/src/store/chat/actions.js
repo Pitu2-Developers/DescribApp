@@ -2,8 +2,12 @@ import $axios from 'axios'
 import { REQUEST_CONVERSATIONS } from './mutation-types';
 // const AUTH_URL = "http://localhost:7000/auth"
 // const API_URL = "http://localhost:7000/api"
-const AUTH_URL = "http://192.168.1.68:7000/auth"
-const API_URL = "http://192.168.1.68:7000/api"
+// const AUTH_URL = "http://172.20.10.4:7000/auth"
+// const API_URL = "http://172.20.10.4:7000/api"
+
+const AUTH_URL = "http://10.42.0.1:7000/auth"
+const API_URL = "http://10.42.0.1:7000/api"
+
 
 
 export async function getConversations({ commit }) {

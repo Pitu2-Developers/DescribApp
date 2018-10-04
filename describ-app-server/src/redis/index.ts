@@ -7,7 +7,7 @@ const HASH_NAME = 'users-connected'
 export class RedisHandler {
     constructor() { }
 
-    public async setSocketID(_id: string, socketID: string) {
+    public async setSocketID(_id: string, socketID: string): Promise<number> {
         return await client.hset(HASH_NAME, _id, socketID)
     }
 

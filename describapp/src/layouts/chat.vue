@@ -86,7 +86,7 @@
         <q-route-tab
           slot="title"
           icon="phone"
-          to="/dashboard/contacts"
+          to="/contacts"
           replace
           label="Contacts"
         />
